@@ -29,6 +29,7 @@ module.exports = function Layout({ user, children }) {
           {user && (
             <div>
               <a href="/">Главный чат</a>
+              <a href="/antistress">Антистресс</a>
               <p>{`Привет, ${user.userName}!`}</p>
               <a href="/logout">
                 Выйти

@@ -24,6 +24,7 @@ const registerRoutes = require('./routes/registerRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 const logoutRoutes = require('./routes/logoutRoutes');
 const roomRoutes = require('./routes/roomRoutes');
+const antiStressRoutes = require('./routes/antiStressRoutes');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -52,6 +53,7 @@ app.use('/register', registerRoutes);
 app.use('/login', loginRoutes);
 app.use('/logout', logoutRoutes);
 app.use('/room', roomRoutes);
+app.use('/antistress', antiStressRoutes);
 
 app.get('*', (req, res) => {
   res.redirect('/');
