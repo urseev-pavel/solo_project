@@ -26,8 +26,8 @@ const registerUser = async (req, res) => {
     } else {
       const hashUserPassword = await bcrypt.hash(userPassword, 9); // !!! Хеширование пароля перед записью в БД ('9' - кол-во циклов хеширования)
       const newUserData = await User.create({ name: userName, email: userEmail, password: hashUserPassword });
-      // console.log('===>', { name: newUserData.name, id: newUserData.id });
-      req.session.user = { name: newUserData.name, id: newUserData.id };
+      // console.log('===>', { userName: newUserData.name, userId: newUserData.id });
+      req.session.user = { userName: newUserData.name, userId: newUserData.id };
       // !!! Перед отправкой ответа на "фронт" необходимо дождаться записи файла в "sessions" при помощи следующей конструкции:
       req.session.save(() => {
         res.json({ backResult: 'REGISTER-OK' });

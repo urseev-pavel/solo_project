@@ -26,7 +26,7 @@ const loginUser = async (req, res) => {
     } else {
       const passCheck = await bcrypt.compare(userPassword, userData.password); // !!! Сверка пароля с захешированным паролем в БД
       if (passCheck) {
-        req.session.user = { name: userData.name, id: userData.id };
+        req.session.user = { userName: userData.name, userId: userData.id };
         // !!! Перед отправкой ответа на "фронт" необходимо дождаться записи файла в "sessions" при помощи следующей конструкции:
         req.session.save(() => {
           // console.log('===> LOGIN-OK');

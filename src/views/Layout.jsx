@@ -7,34 +7,33 @@ module.exports = function Layout({ user, children }) {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* <link rel="stylesheet" href="/css/styles.css" />
-        <script defer src="/js/front.js" /> */}
-        <title>SOLO</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <title>Solo Project</title>
       </head>
 
-      <body>
+      <body data-user-id={user?.userId}>
 
         <nav className="navbar">
-          <a href="/">Главная</a>
 
           {!user && (
-            <>
+            <div>
               <a href="/login">
                 Войти
               </a>
               <a href="/register">
                 Зарегистрироваться
               </a>
-            </>
+            </div>
           )}
 
           {user && (
-            <>
-              <p>{`Привет, ${user.name}!`}</p>
+            <div>
+              <a href="/">Главный чат</a>
+              <p>{`Привет, ${user.userName}!`}</p>
               <a href="/logout">
                 Выйти
               </a>
-            </>
+            </div>
           )}
 
         </nav>
