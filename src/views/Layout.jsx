@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Layout({ user, children }) {
+module.exports = function Layout({ user, canvas, children }) {
   return (
     <html lang="ru">
       <head>
@@ -12,6 +12,14 @@ module.exports = function Layout({ user, children }) {
       </head>
 
       <body data-user-id={user?.userId}>
+
+        {canvas && (
+          <>
+            <link rel="stylesheet" href="/css/canvas.css" />
+            <script defer src="/js/canvas.js" />
+            <canvas id="canvas1" />
+          </>
+        )}
 
         <nav className="navbar">
 

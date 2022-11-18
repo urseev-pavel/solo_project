@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 
 module.exports = function Beaver() {
   return (
-    <Layout>
+    <Layout canvas="true">
       <div className="beaver">
         <div className="beaver-head">
           <div className="cheek left" />
