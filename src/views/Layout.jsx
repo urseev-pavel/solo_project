@@ -17,7 +17,7 @@ module.exports = function Layout({ user, canvas, children }) {
           <>
             <link rel="stylesheet" href="/css/canvas.css" />
             <script defer src="/js/canvas.js" />
-            <canvas id="canvas1" />
+            <canvas id="canvas" />
           </>
         )}
 

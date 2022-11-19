@@ -319,7 +319,7 @@ p {
 .elbrus {
   border: 1px solid black;
   border-radius: 15%;
-  background-color: #4520AB;
+  background-color: #4520ab;
   height: 30%;
   font-family: 'Courier New', Courier, monospace;
   font-size: 120px;
@@ -609,7 +609,7 @@ font-size: 40px;
 }
 
 p.my {
-  background-color: #29edff;
+  background-color: rgb(41, 237, 255, 0.4);
   box-shadow: 0 0 5px #29edff;
   border-radius: 5px;
 }

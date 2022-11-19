@@ -1,4 +1,19 @@
-canvas {
+body {
+  background: black;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  cursor: none;
+  z-index: -1;
+}
+
+.main {
+  color: #4520ab;
+  font-weight: 700;
+  font-size: 100px;
+  text-shadow: 0 0 5px #29edff;
 }

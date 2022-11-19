@@ -1,121 +1,78 @@
-(() => {
-  const config = {
-    dotMinRad: 5,
-    dotMaxRad: 20,
-    sphereRad: 400,
-    bigDotRad: 25,
-    mouseSize: 160,
-    massFactor: 0.002,
-    defColor: 'rgba(69, 32, 171, 0.9)',
-    smooth: 0.75,
-  };
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-  const TWO_PI = 2 * Math.PI;
-  const canvas = document.querySelector('canvas');
-  const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const particleArray = [];
+const numberOfParticles = 500;
 
-  let w; let h; let mouse; let
-    dots;
+const mouse = {
+  x: null,
+  y: null,
+};
 
-  class Dot {
-    constructor(r) {
-      this.pos = { x: mouse.x, y: mouse.y };
-      this.vel = { x: 0, y: 0 };
-      this.rad = r || random(config.dotMinRad, config.dotMaxRad);
-      this.mass = this.rad * config.massFactor;
-      this.color = config.defColor;
-    }
+window.addEventListener('mousemove', (event) => {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
 
-    draw(x, y) {
-      this.pos.x = x || this.pos.x + this.vel.x;
-      this.pos.y = y || this.pos.y + this.vel.y;
-      createCircle(this.pos.x, this.pos.y, this.rad, true, this.color);
-      createCircle(this.pos.x, this.pos.y, this.rad, false, config.defColor);
-    }
+setInterval(() => {
+  mouse.x = undefined;
+  mouse.y = undefined;
+}, 200);
+
+class Particle {
+  constructor(x, y, size, color, weight) {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+    this.color = color;
+    this.weight = weight;
   }
 
-  function updateDots() {
-    for (let i = 0; i < dots.length; i++) {
-      const acc = { x: 0, y: 0 };
-
-      for (let j = 0; j < dots.length; j++) {
-        if (i == j) continue;
-        const [a, b] = [dots[i], dots[j]];
-
-        const delta = { x: b.pos.x - a.pos.x, y: b.pos.y - a.pos.y };
-        const dist = Math.sqrt(delta.x * delta.x + delta.y * delta.y) || 1;
-        let force = (dist - config.sphereRad) / dist * b.mass;
-
-        if (j == 0) {
-          const alpha = config.mouseSize / dist;
-          a.color = `rgba(41, 237, 255, ${alpha})`;
-
-          dist < config.mouseSize ? force = (dist - config.mouseSize) * b.mass : force = a.mass;
-        }
-
-        acc.x += delta.x * force;
-        acc.y += delta.y * force;
-      }
-
-      dots[i].vel.x = dots[i].vel.x * config.smooth + acc.x * dots[i].mass;
-      dots[i].vel.y = dots[i].vel.y * config.smooth + acc.y * dots[i].mass;
-    }
-
-    dots.map((e) => (e == dots[0] ? e.draw(mouse.x, mouse.y) : e.draw()));
-  }
-
-  function createCircle(x, y, rad, fill, color) {
-    ctx.fillStyle = ctx.strokeStyle = color;
+  draw() {
     ctx.beginPath();
-    ctx.arc(x, y, rad, 0, TWO_PI);
-    ctx.closePath();
-    fill ? ctx.fill() : ctx.stroke();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+    ctx.fillStyle = this.color;
+    ctx.fill();
   }
 
-  function random(min, max) {
-    return Math.random() * (max - min) + min;
+  update() {
+    this.size -= 0.05;
+    if (this.size < 0) {
+      this.x = (mouse.x + ((Math.random() * 20) - 10));
+      this.y = (mouse.y + ((Math.random() * 20) - 10));
+      this.size = (Math.random() * 25) + 2;
+      this.weight = (Math.random() * 2) - 0.5;
+    }
+    this.y += this.weight;
+    this.weight += 0.2;
+    if (this.y > canvas.height - this.size) {
+      this.weight *= -1;
+    }
   }
+}
 
-  function init() {
-    w = canvas.width = innerWidth;
-    h = canvas.height = innerHeight;
-
-    mouse = { x: w / 2, y: h / 2, down: false };
-    dots = [];
-
-    dots.push(new Dot(config.bigDotRad));
+function init() {
+  for (let i = 0; i < numberOfParticles; i += 1) {
+    const x = Math.random() * canvas.width;
+    const y = Math.random() * canvas.height;
+    const size = (Math.random() * 15) + 2;
+    const color = 'rgb(69, 32, 171)';
+    const weight = 1;
+    particleArray.push(new Particle(x, y, size, color, weight));
   }
+}
 
-  function loop() {
-    ctx.clearRect(0, 0, w, h);
-
-    if (mouse.down) { dots.push(new Dot()); }
-    updateDots();
-
-    window.requestAnimationFrame(loop);
+function animate() {
+  ctx.fillStyle = 'rgba(0,0,0,0.07)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < particleArray.length; i += 1) {
+    particleArray[i].update();
+    particleArray[i].draw();
   }
+  requestAnimationFrame(animate);
+}
 
-  function line(x, y, x2, y2) {
-    ctx.lineWidth = 3;
-    ctx.strokeStyle = 'white';
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(x2, y2);
-    ctx.stroke();
-  }
-
-  init();
-  loop();
-
-  function setPos({ layerX, layerY }) {
-    [mouse.x, mouse.y] = [layerX, layerY];
-  }
-
-  function isDown() {
-    mouse.down = !mouse.down;
-  }
-
-  canvas.addEventListener('mousemove', setPos);
-  window.addEventListener('mousedown', isDown);
-  window.addEventListener('mouseup', isDown);
-})();
+init();
+animate();

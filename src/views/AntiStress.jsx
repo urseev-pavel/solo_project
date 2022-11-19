@@ -6,7 +6,8 @@ module.exports = function AntiStress({ user }) {
     <Layout user={user}>
       <script defer src="/js/antistress.js" />
       <link rel="stylesheet" href="/css/antistress.css" />
-      <canvas />
+      <canvas id="canvas" />
+      Elbrus bootcamp
     </Layout>
   );
 };
