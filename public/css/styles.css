@@ -639,7 +639,6 @@ p.my {
   color: #29edff;
   font-weight: 700;
   font-size: 22px;
-  /* border: 1px solid black; */
   white-space: nowrap;
   overflow: hidden;
   display: flex;
