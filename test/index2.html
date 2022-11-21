@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Solo Project</title>
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+      <div>
+        <a href="/">Главный чат</a>
+        <a href="/antistress">Антистресс</a>
+        <p>Привет, Юзер!</p>
+        <a href="/logout">
+          Выйти
+        </a>
+      </div>
+    </nav>
+
+    <main class="main">
+
+
+
+      <!-- <div class="chat">
+        <div class="chat-container">
+          <div class="chat-name">
+            Главный чат
+          </div>
+          <div class="chat-content">
+
+            <div class="online-list">
+              <div class="chat-info">Сейчас онлайн<br/>в главном чате:</div>
+              <div class="user-list">
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <p>Name aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa</p>
+                <a href="/">Vasya</a><br/>
+                <p>Name</p>
+                <a href="/">Vasyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaa</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <p>Name</p>
+                <p>Name</p>
+                <p>Name</p>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <p>Name</p>
+                <p>Name</p>
+                <p>Name</p>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <p>Name</p>
+                <p>Name</p>
+                <p>Name</p>
+              </div>              
+            </div>
+
+            <div class="main-chat-messege">
+              <div class="chat-info">Написать сообщение в главный чат:</div>
+              <form name="mainChatMessege">
+                <input name="userMessage" type="text" placeholder="Введите сообщение..." required/>
+                <button type="submit">Отправить</button>
+              </form>
+              <div class="chat-messege">                
+                <p><b>USER-1: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium iusto molestias voluptatibus at eos animi laborum unde, sequi impedit deserunt nobis, tempore neque voluptatum assumenda odit voluptate officia sed. Hic.</p>
+                <p><b>USER-2: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, mollitia.</p>
+                <p class="my"><b>USER-555: </b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus rem necessitatibus id consequatur veniam culpa eum placeat voluptatum odit similique? <span>11.33.4444</span></p>
+                <p class="my"><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+
+              </div>
+            </div>
+
+            <div class="wait-list">
+              <div class="chat-info">Сейчас<br/>меня ожидают:</div>
+              <div class="user-list">
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaa</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div> -->
+
+      
+
+      <div class="chat">
+        <div class="chat-container">
+
+          <div class="chat-name">
+            Персональный чат
+          </div>
+          <div class="room-lable">
+            для пользователей:
+          </div>
+          <div class="room-users">
+            <span class="online">Юзер-1</span> и <span class="offline">Юзер-2</span>
+          </div>
+
+          <div class="chat-content">
+
+            <div class="main-chat-messege room">
+              <div class="chat-info">Написать сообщение в персональный чат:</div>
+              <form name="roomChatMessege">
+                <input name="userMessage" type="text" placeholder="Введите сообщение..." required/>
+                <button type="submit">Отправить</button>
+              </form>
+              <div class="chat-messege">                
+                <p><b>USER-1: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium iusto molestias voluptatibus at eos animi laborum unde, sequi impedit deserunt nobis, tempore neque voluptatum assumenda odit voluptate officia sed. Hic.</p>
+                <p><b>USER-2: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, mollitia.</p>
+                <p class="my"><b>USER-555: </b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus rem necessitatibus id consequatur veniam culpa eum placeat voluptatum odit similique? <span>11.33.4444</span></p>
+                <p class="my"><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
+
+  </body>
+</html>

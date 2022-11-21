@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Solo Project</title>
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+      <div>
+        <a href="/">Главный чат</a>
+        <a href="/antistress">Антистресс</a>
+        <p>Привет, Юзер!</p>
+        <a href="/logout">
+          Выйти
+        </a>
+      </div>
+    </nav>
+
+    <main class="main">
+
+
+
+      <!-- <div class="chat">
+        <div class="chat-container">
+          <div class="chat-name">
+            Главный чат
+          </div>
+          <div class="chat-content">
+
+            <div class="online-list">
+              <div class="chat-info">Сейчас онлайн<br/>в главном чате:</div>
+              <div class="user-list">
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <p>Name aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa</p>
+                <a href="/">Vasya</a><br/>
+                <p>Name</p>
+                <a href="/">Vasyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaa</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <p>Name</p>
+                <p>Name</p>
+                <p>Name</p>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <p>Name</p>
+                <p>Name</p>
+                <p>Name</p>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <p>Name</p>
+                <p>Name</p>
+                <p>Name</p>
+              </div>              
+            </div>
+
+            <div class="main-chat-messege">
+              <div class="chat-info">Написать сообщение в главный чат:</div>
+              <form name="mainChatMessege">
+                <input name="userMessage" type="text" placeholder="Введите сообщение..." required/>
+                <button type="submit">Отправить</button>
+              </form>
+              <div class="chat-messege">                
+                <p><b>USER-1: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium iusto molestias voluptatibus at eos animi laborum unde, sequi impedit deserunt nobis, tempore neque voluptatum assumenda odit voluptate officia sed. Hic.</p>
+                <p><b>USER-2: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, mollitia.</p>
+                <p class="my"><b>USER-555: </b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus rem necessitatibus id consequatur veniam culpa eum placeat voluptatum odit similique? <span>11.33.4444</span></p>
+                <p class="my"><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+
+              </div>
+            </div>
+
+            <div class="wait-list">
+              <div class="chat-info">Сейчас<br/>меня ожидают:</div>
+              <div class="user-list">
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaa</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+                <a href="/">Vasya</a><br/>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div> -->
+
+      
+
+      <div class="chat">
+        <div class="chat-container">
+
+          <div class="chat-name finger">
+            BINNARY BATTLE
+          </div>
+          <!-- <div class="room-lable">
+            Игровой зал пользователей:
+          </div> -->
+          <div class="room-users">
+            <span class="online">&laquo;<span class="finger">O</span>&raquo; &mdash; Юзер-1</span> <span class="finger">VS</span> <span class="offline">&laquo;<span class="finger">1</span>&raquo; &mdash; Юзер-2</span>            
+          </div>
+
+          <div class="game-content">
+
+            <div class="main-game">
+
+              <div class="game-info">
+                <p class="game-score">Счёт игры: | &laquo;<span class="finger">O</span>&raquo; &mdash; 0 || &laquo;<span class="finger">1</span>&raquo; &mdash; 0 |</p>
+                <p>Статус игры:</p>                
+                <!-- <p class="game-info-text">ходит &laquo;<span class="finger">O</span>&raquo; ( Юзер-1 )</p> -->
+                <p class="game-info-text chiter">Юзер-1 пытался читерить! Ход не засчитан!!!</p>
+                <!-- <a href="#">начать новую игру</a> -->
+              </div>
+
+              <div class="game-block">    
+                <div class="small-game non-active">
+                  <div class="cell">O</div>
+                  <div class="cell">O</div>
+                  <div class="cell win">1</div>
+                  <div class="cell">O</div>
+                  <div class="cell win">1</div>
+                  <div class="cell">O</div>
+                  <div class="cell win">1</div>
+                  <div class="cell">O</div>
+                  <div class="cell">1</div>
+                </div>
+                <div class="small-game">
+                  <div class="cell non-active">O</div>
+                  <div class="cell non-active">1</div>
+                  <div class="cell non-active">O</div>
+                  <div class="cell active"></div>
+                  <div class="cell non-active">O</div>
+                  <div class="cell active"></div>
+                  <div class="cell active"></div>
+                  <div class="cell non-active">1</div>
+                  <div class="cell non-active">O</div>
+                </div>
+                <div class="small-game">
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="small-game">
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="small-game">
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="small-game">
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="small-game">
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="small-game">
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+                <div class="small-game">
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                  <div class="cell"></div>
+                </div>
+              </div>
+
+
+            </div>
+            
+          </div>
+
+
+
+
+
+
+          <div class="chat-content">
+
+            <div class="main-chat-messege room">
+              <div class="chat-info">Написать сообщение в персональный чат:</div>
+              <form name="roomChatMessege">
+                <input name="userMessage" type="text" placeholder="Введите сообщение..." required/>
+                <button type="submit">Отправить</button>
+              </form>
+              <div class="chat-messege">                
+                <p><b>USER-1: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium iusto molestias voluptatibus at eos animi laborum unde, sequi impedit deserunt nobis, tempore neque voluptatum assumenda odit voluptate officia sed. Hic.</p>
+                <p><b>USER-2: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, mollitia.</p>
+                <p class="my"><b>USER-555: </b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus rem necessitatibus id consequatur veniam culpa eum placeat voluptatum odit similique? <span>11.33.4444</span></p>
+                <p class="my"><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+                <p><b>USER-555: </b>ПРИщукщ <span>11.33.4444</span></p>
+              </div>
+            </div>
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+
+
+    </main>
+
+  </body>
+</html>

@@ -4,6 +4,13 @@ const Layout = require('./Layout');
 module.exports = function Beaver() {
   return (
     <Layout canvas="true">
+      <link rel="stylesheet" href="/css/beaver.css" />
+      <div className="fill-block" />
+      <div className="project-title">
+        Elbrus
+        <br />
+        binnary battle
+      </div>
       <div className="beaver">
         <div className="beaver-head">
           <div className="cheek left" />
@@ -42,6 +49,7 @@ module.exports = function Beaver() {
         <div className="tail-text top">&quot;БОБРЫ&quot;</div>
         <div className="tail-text bottom">2022 // ОНЛАЙН</div>
       </div>
+      <div className="fill-block" />
     </Layout>
   );
 };

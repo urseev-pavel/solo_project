@@ -60,6 +60,7 @@ app.get('*', (req, res) => {
 });
 
 app.locals.usersMap = new Map();
+app.locals.gamesMap = new Map();
 
 const server = httpServer.createServer(app);
 server.on('upgrade', (req, socket, head) => {
@@ -69,7 +70,7 @@ server.on('upgrade', (req, socket, head) => {
       socket.destroy();
     }
     wsServer.handleUpgrade(req, socket, head, (ws) => {
-      wsServer.emit('connection', ws, req, app.locals.usersMap);
+      wsServer.emit('connection', ws, req, app.locals.usersMap, app.locals.gamesMap);
     });
   });
 });

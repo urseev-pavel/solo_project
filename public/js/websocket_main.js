@@ -70,7 +70,7 @@ socket.onmessage = (event) => {
       myLinksDivUpdate(payload);
       break;
 
-    case 'room-online':
+    case 'roomOnline':
       console.log('USER ROOM ONLINE', payload);
       // console.log(payload.usersMapData);
       usersNameDivUpdate(payload);
